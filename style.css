@@ -16,27 +16,20 @@
 
 .content{
     text-align: center;
+    justify-content: space-around;
+    width: 750px;
 }
 
 .content h1{
     font-size: 95px;
     color: #fff;
     margin-bottom: 50px;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
 }
 
-.content a{
-    font-size: 23px;
-    color: #fff;
+.content a:visited, a:active{
     text-decoration: none;
-    border: 2px solid #fff;
-    padding: 15px 25px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-.content a:hover{
-    background-color: #fff;
-    color: #000;
+    color: inherit;
 }
 
 .background-clip{
@@ -44,6 +37,22 @@
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px 15px;
+    margin-right: 25px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #fff;
 }
 
 @media (min-aspect-ratio:16/9){
