@@ -1,61 +1,83 @@
-*{
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI';
-}
-
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    color: #000;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.content{
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     text-align: center;
 }
 
-.content h1{
-    font-size: 95px;
-    color: #fff;
+.section-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
     margin-bottom: 50px;
 }
 
-.content a{
-    font-size: 23px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 15px 25px;
-    border-radius: 50px;
-    transition: 0.3s;
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.content a:hover{
-    background-color: #fff;
-    color: #000;
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
 }
 
-.background-clip{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+.social-icon img:hover {
+    transform: scale(1.25);
 }
 
-@media (min-aspect-ratio:16/9){
-    .background-clip{
-        width: 100%;
-        height: auto;
-    }
+#about h2{
+    font-size:50px;
 }
 
-@media (max-aspect-ratio:16/9){
-    .background-clip{
-        width: auto;
-        height: 100%;
-    }
+#contact h2{
+    font-size: 30px;
+}
+
+#about p{
+    font-size: 20px;
 }
